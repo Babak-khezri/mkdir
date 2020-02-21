@@ -1,8 +1,8 @@
 from os import *
 from random import *
 system("cd ..\..\..")
-name = "abcdefghijklmnopqrstuvwxyz123456789#@!$%^&*()_+=-/\?.,:;><~`"
-le = len(name) - 1
+name = "abcdefghijklmnopqrstuvwxyz#@!$%^&*()_+=-/\?.,:;><~`"
+le = len(name) - 2
 while True:
     rand_1 = randint(0,le)
     rand_2 = randint(0,le)
