@@ -1,17 +1,9 @@
 from os import *
-from sys import *
+from getpass import *
 from random import *
 def Desktop():
-    lst = []
-    addres = getcwd()
-    l = len(addres)
-    for i in range(l):
-        lst.append(addres[i])
-    addres = ''
-    for i in range(l):
-        addres += lst[i]
-        if lst[i] == 'p' and lst[i-1] == 'o' and lst[i-2] == 't' and lst[i-3] == 'k' and lst[i-4] == 's' and lst[i-5] == 'e' and lst[i-6] == 'D':
-            break            
+    username = getuser()
+    addres = "C:\\Users\\" + username + "\\Desktop" 
     return addres
 addres = Desktop()
 chdir(addres)
